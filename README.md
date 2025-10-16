@@ -62,7 +62,7 @@ empresa_tech/
 
 🖥️ Capturas del Proyecto
 
-📌 Aquí puedes insertar las imágenes del funcionamiento del CRUD, login y dashboard.
+📌  funcionamiento del CRUD, login y dashboard.
 
 Vista	Imagen
 Login	
@@ -77,7 +77,7 @@ Lista de Productos
 ![alt text](image-4.png)
 
 
-(Crea una carpeta static/img/ y guarda allí las capturas para que se muestren en GitHub)
+
 
 ⚙️ Cómo Ejecutarlo Localmente
 
