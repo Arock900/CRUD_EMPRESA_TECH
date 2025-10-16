@@ -1,0 +1,22 @@
+# Ignorar carpetas de caché de Python
+__pycache__/
+*.py[cod]
+
+# Ignorar base de datos local
+*.db
+
+# Ignorar entorno virtual (si llegas a crear uno)
+venv/
+.env/
+
+# Ignorar archivos temporales
+*.log
+*.sqlite3
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de configuración de VSCode
+.vscode/
+
+# Ignorar imágenes locales si no quieres subirlas
+# static/img/
