@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa Tech - Bienvenido</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+    <h1 style="margin-top: 50px;">Bienvenido a Empresa Tech</h1>
+    <p>Por favor, inicia sesión o regístrate para continuar.</p>
+
+    <div style="margin-top: 40px;">
+        <a href="{{ url_for('usuarios.login') }}">
+            <button style="
+                padding: 10px 25px;
+                font-size: 16px;
+                background-color: #17a2b8;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-right: 10px;
+            ">
+                🔑 Iniciar Sesión
+            </button>
+        </a>
+
+        <a href="{{ url_for('usuarios.registro') }}">
+            <button style="
+                padding: 10px 25px;
+                font-size: 16px;
+                background-color: #ffc107;
+                color: black;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            ">
+                🧾 Registrarse
+            </button>
+        </a>
+    </div>
+
+</body>
+</html>

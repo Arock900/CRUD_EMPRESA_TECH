@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>👋 Bienvenido, {{ usuario }}!</h1>
+    <h2>Panel de Control - Empresa Tech</h2>
+
+    <div style="text-align:center; margin-top:30px;">
+        <!-- Botón para agregar producto -->
+        <a href="{{ url_for('inventario.agregar_producto') }}">
+            <button style="
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-right: 10px;
+            ">
+                ➕ Agregar Producto
+            </button>
+        </a>
+
+        <!-- Botón para ver lista -->
+        <a href="{{ url_for('inventario.lista_productos') }}">
+            <button style="
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #28a745;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-right: 10px;
+            ">
+                📋 Ver Lista de Productos
+            </button>
+        </a>
+
+        <!-- Cerrar sesión -->
+        <a href="{{ url_for('usuarios.logout') }}">
+            <button style="
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #dc3545;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            ">
+                🚪 Cerrar Sesión
+            </button>
+        </a>
+    </div>
+</body>
+</html>
+

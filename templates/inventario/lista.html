@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Acciones</th>
+        </tr>
+
+        {% for p in productos %}
+        <tr>
+            <td>{{ p[0] }}</td>
+            <td>{{ p[1] }}</td>
+            <td>{{ p[2] }}</td>
+            <td>{{ p[3] }}</td>
+            <td>
+                <!-- 🔹 Botón para eliminar -->
+                <form action="{{ url_for('inventario.eliminar_producto', id=p[0]) }}" method="POST" style="display:inline;">
+                    <button type="submit" onclick="return confirm('¿Seguro que deseas eliminar este producto?');">Eliminar</button>
+                </form>
+                <form action="{{ url_for('inventario.editar_producto', id=p[0]) }}" method="get" style="display:inline;">
+                    <button type="submit">✏️ Editar</button>
+                </form>
+
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="{{ url_for('inventario.agregar_producto') }}">Agregar otro producto</a>
+</body>
+</html>

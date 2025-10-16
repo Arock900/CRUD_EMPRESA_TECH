@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Producto</title>
+</head>
+<body>
+    <h1>Editar Producto</h1>
+
+    <form method="POST" action="{{ url_for('inventario.editar_producto', id=producto[0]) }}">
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" value="{{ producto[1] }}" required><br><br>
+
+        <label>Precio:</label><br>
+        <input type="number" name="precio" step="0.01" value="{{ producto[2] }}" required><br><br>
+
+        <label>Cantidad:</label><br>
+        <input type="number" name="cantidad" value="{{ producto[3] }}" required><br><br>
+
+        <button type="submit">💾 Guardar cambios</button>
+    </form>
+
+    <br>
+    <a href="{{ url_for('inventario.lista_productos') }}">⬅ Volver a la lista</a>
+</body>
+</html>
